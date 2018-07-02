@@ -6,18 +6,21 @@ function TicketList(props){
   return (
     <div>
       <hr/>
-      {props.ticketList.map((ticket) =>
+      {props.showFullTicketList.map((ticket) =>
         <Ticket names={ticket.names}
           location={ticket.location}
+          key={ticket.id}
           issue={ticket.issue}
-          key={ticket.id}/>
+          handleShowingSelectedTicketIssue={props.handleShowingSelectedTicketIssue}
+        />
       )}
     </div>
   );
 }
 
 TicketList.propTypes = {
-  ticketList: PropTypes.array
+  showFullTicketList: PropTypes.array,
+  handleShowingSelectedTicketIssue: PropTypes.func
 };
 
 export default TicketList;
