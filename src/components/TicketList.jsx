@@ -9,9 +9,10 @@ function TicketList(props){
       {props.showFullTicketList.map((ticket) =>
         <Ticket names={ticket.names}
           location={ticket.location}
-          key={ticket.id}
           issue={ticket.issue}
           handleShowingSelectedTicketIssue={props.handleShowingSelectedTicketIssue}
+          timeOpen={ticket.timeOpen}
+          key={ticket.id}
         />
       )}
     </div>

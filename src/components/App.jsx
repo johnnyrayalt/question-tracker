@@ -10,15 +10,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterTicketList: [
-        {
-          names: 'tyler',
-          location: '9a',
-          issue: 'need help',
-          id: 1
-        }
-      ],
-      requestedTicketIssue: 'Hey'
+      masterTicketList: []
     };
     this.handleAddingNewTicketToList = this.handleAddingNewTicketToList.bind(this);
     this.handleShowingSelectedTicketIssue = this.handleShowingSelectedTicketIssue.bind(this);
