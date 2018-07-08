@@ -11,7 +11,7 @@ function TicketList(props){
           location={ticket.location}
           issue={ticket.issue}
           handleShowingSelectedTicketIssue={props.handleShowingSelectedTicketIssue}
-          timeOpen={ticket.timeOpen}
+          formattedWaitTime={ticket.formattedWaitTime}
           key={ticket.id}
         />
       )}

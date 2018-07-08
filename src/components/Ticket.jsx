@@ -7,16 +7,12 @@ function Ticket(props){
     props.handleShowingSelectedTicketIssue(props.issue);
   }
 
-  function displayTimeOpen(timeOpen) {
-    return timeOpen.from(new Moment(), true);
-  }
-
   return (
     <div className='ticketContainer'>
       <h3 className='groupInfo' onClick={handleClick}>
         {props.location} - {props.names}
       </h3>
-      <h4>{displayTimeOpen(props.timeOpen)}</h4>
+      <h4>{props.formattedWaitTime}</h4>
       <hr/>
       <style jsx>{`
           .ticketContainer {
@@ -39,7 +35,7 @@ Ticket.propTypes = {
   issue: PropTypes.string,
   onSelectingTicketIssue: PropTypes.func,
   handleShowingSelectedTicketIssue: PropTypes.func,
-  timeOpen: PropTypes.instanceOf(Moment).isRequired
+  formattedWaitTime: PropTypes.string.isRequired
 };
 
 export default Ticket;
